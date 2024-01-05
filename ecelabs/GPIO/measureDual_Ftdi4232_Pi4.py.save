@@ -1,0 +1,163 @@
+from pyftdi.ftdi import Ftdi
+from pyftdi.gpio import GpioAsyncController
+import threading
+#import cv2
+#import time
+#import asyncio
+
+def getBinList(d): # int to binary list 8bits 
+    d0=list('{0:08b}'.format(d))
+    d1=[int(x) for x in d0]
+    return d1[::-1]
+
+class Dual_Ftdi4232: #  quad-chanels 32 gpio pins + dual channel 16 + single changel 8 =56 
+    def __init__(self):
+        Ftdi.show_devices() # print list of devices
+        devices = Ftdi.list_devices()
+        try:
+                sn1 = devices[0][0][4]
+                #sn2 = devices[1][0][4]
+        except:
+                print('Could not obtain serial number for device')
+        self.dev0='FT55LYXI'
+        self.dev1='FT55UB9R'
+        self.gpio0=GpioAsyncController() # SS0
+        self.gpio1=GpioAsyncController() # SS1
+        self.gpio2=GpioAsyncController() # SS2
+        self.gpio3=GpioAsyncController() # SS3
+        #self.gpio4=GpioAsyncController() # SS4
+        #self.gpio5=GpioAsyncController() # SS5
+        #self.gpio6=GpioAsyncController() # SS6
+        #self.gpio7=GpioAsyncController() # SS7
+
+
+
+       	self.gpio0.configure('ftdi://ftdi:4232:'+self.dev0+'/1',direction=0x00) # 8 inputs 
+        self.gpio1.configure('ftdi://ftdi:4232:'+self.dev0+'/2',direction=0x00) # 8 inputs 
+        self.gpio2.configure('ftdi://ftdi:4232:'+self.dev0+'/3',direction=0x00) # 8 inputs 
+        self.gpio3.configure('ftdi://ftdi:4232:'+self.dev0+'/4',direction=0x00) # 8 inputs
+
+        #self.gpio4.configure('ftdi://ftdi:4232:'+self.dev1+'/1',direction=0x00) # 8 inputs
+        #self.gpio5.configure('ftdi://ftdi:4232:'+self.dev1+'/2',direction=0x00) # 8 inputs
+        #self.gpio6.configure('ftdi://ftdi:4232:'+self.dev1+'/3',direction=0x00) # 8 inputs
+        #self.gpio7.configure('ftdi://ftdi:4232:'+self.dev1+'/4',direction=0x00) # 8 inputs
+
+
+        self.leds=['0']*64; #8*8
+
+        #self.leds=[self.leds0,self.leds1,self.leds2,self.leds3]
+  
+   
+    def __del__(self):
+
+        self.gpio0.close()
+        self.gpio1.close()
+        self.gpio2.close()
+        self.gpio3.close()
+        self.gpio4.close()
+        self.gpio5.close()
+        self.gpio6.close()
+        self.gpio7.close()
+
+
+    def detect_leds(self):
+        try:
+            data0=self.gpio0.read()
+            data1=self.gpio1.read()
+            data2=self.gpio2.read()
+            data3=self.gpio3.read()
+            data4=self.gpio4.read()
+            data5=self.gpio5.read()
+            data6=self.gpio6.read()
+            data7=self.gpio7.read()
+        except:
+            data0=0
+            data1=0
+            data2=0
+            data3=0
+            data4=0
+            data5=0
+            data6=0
+            data7=0
+
+        self.SS0=list('{0:b}'.format(data0).zfill(8)[::-1])
+        self.SS1=list('{0:b}'.format(data1).zfill(8)[::-1])
+        self.SS2=list('{0:b}'.format(data2).zfill(8)[::-1])
+        self.SS3=list('{0:b}'.format(data3).zfill(8)[::-1])
+        self.SS4=list('{0:b}'.format(data4).zfill(8)[::-1])
+        self.SS5=list('{0:b}'.format(data5).zfill(8)[::-1])
+        self.SS6=list('{0:b}'.format(data6).zfill(8)[::-1])
+        self.SS7=list('{0:b}'.format(data7).zfill(8)[::-1])
+
+        self.leds=self.SS0+self.SS1+self.SS2+self.SS3+self.SS4+self.SS5+self.SS6+self.SS7
+        #print('SS0=',self.SS0)
+        #print('SS1=',self.SS1)
+        #print('SS2=',self.SS2)
+        #print('SS3=',self.SS3)
+        #print('SS4=',self.SS4)
+        #print('SS5=',self.SS5)
+        #print('SS6=',self.SS6)
+        #print('SS7=',self.SS7)
+	#print('gpio0=',gpio0)
+        #print('gpio1=',gpio1)
+        #print('gpio2=',gpio2)
+        #print('gpio3=',gpio3)
+        #self.leds0=gpio0[0:7]+gpio3[0:3]+gpio0[7:8]
+        #self.leds1=gpio1[0:7]+gpio3[4:7]+gpio1[7:8]
+        #self.leds2=gpio2[0:7]+gpio1[7]+gpio2[7]+gpio3[7]
+        #self.leds=[self.leds0,self.leds1,self.leds2]
+
+   
+
+    def detect_leds_continous(self):
+        self.detect_leds()
+        t=threading.Timer(5e-3,self.detect_leds_continous) # 0.5e-3
+        t.start()
+        #while (cv2.waitKey(1 )&0xFF):# 20ms
+        #while True:
+        #    self.detect_leds()
+        
+        #    asyncio.sleep(1.0e-3) # every 1ms
+        
+            #print('leds=',self.LEDS)
+            #print('daq: len of leds=48?',len(self.LEDS))
+    
+ 
+    def read_port(self,portNumber):
+        if portNumber==0:
+            data8=self.gpio0.read()
+        elif portNumber==1:
+            data8=self.gpio1.read()
+        elif portNumber==2:
+            data8=self.gpio2.read()
+        elif portNumber==3:
+            data8=self.gpio3.read()
+        elif portNumber==4:
+            data8=self.gpio4.read()
+        elif portNumber==5:
+            data8=self.gpio5.read()
+        elif portNumber==6:
+            data8=self.gpio6.read()
+        elif portNumber==7:
+            data8=self.gpio7.read()
+        return data8
+
+    def writeKEY_CLICK(self,keyNumber):#btn 4-0
+        self.writeKEY1(keyNumber,0)
+        self.writeKEY1(keyNumber,1)
+        self.writeKEY1(keyNumber,0)
+    
+    def writeKEY1(self,keyNumber,data1): # single button
+        d=self.read_port(2) # read
+        d[keyNumber]=data1 # modify
+        self.write_port(2,d) # write-back
+
+   
+    def writeSW1(self,swNumber,data):# single swtich
+        if swNumber<8: # port1
+            d=self.read_port(0)
+            d[swNumber]=data
+            self.write_port(0,d)
+        else:
+            d=self.read_port(1)
+            d[swNumber-8]=data

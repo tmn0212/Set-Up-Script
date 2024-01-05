@@ -1,0 +1,295 @@
+# ECELabs FPGA for ECE270 pinmap
+# ver 3.0
+# Last updated: Dec 4,2023
+
+set_io --warn-no-port HWCLK J3
+set_io --warn-no-port CLK12M J3 # 12MHz onboard clock
+set_io --warn-no-port CLK100 A11 # 100Hz onboard clock
+set_io --warn-no-port PB[19] A10
+set_io --warn-no-port PB[18] C9
+set_io --warn-no-port PB[17] A9
+set_io --warn-no-port PB[16] B9
+set_io --warn-no-port PB[15] B8
+set_io --warn-no-port PB[14] A7
+set_io --warn-no-port PB[13] B7
+set_io --warn-no-port PB[12] C7
+set_io --warn-no-port PB[11] A6
+set_io --warn-no-port PB[10] C6
+set_io --warn-no-port PB[9] B6
+set_io --warn-no-port PB[8] A5
+set_io --warn-no-port PB[7] B5
+set_io --warn-no-port PB[6] B4
+set_io --warn-no-port PB[5] A2
+set_io --warn-no-port PB[4] A1
+set_io --warn-no-port PB[3] C5
+set_io --warn-no-port PB[2] C4
+set_io --warn-no-port PB[1] B3
+set_io --warn-no-port PB[0] C3
+set_io --warn-no-port SS0[0] F4 # A
+set_io --warn-no-port SS0[1] C2 # B
+set_io --warn-no-port SS0[2] C1 # C
+set_io --warn-no-port SS0[3] H3 # D
+set_io --warn-no-port SS0[4] J5 # E
+set_io --warn-no-port SS0[5] H5 # F
+set_io --warn-no-port SS0[6] H6 # G
+set_io --warn-no-port SS0[7] F5 # DP
+set_io --warn-no-port SS1[0] J1 # A
+set_io --warn-no-port SS1[1] J2 # B
+set_io --warn-no-port SS1[2] J4 # C
+
+set_io --warn-no-port SS1[3] K4 # D
+set_io --warn-no-port SS1[4] L6 # E
+set_io --warn-no-port SS1[5] L4 # F
+set_io --warn-no-port SS1[6] K1 # G
+set_io --warn-no-port SS1[7] H4 # DP
+set_io --warn-no-port SS2[0] M4 # A
+set_io --warn-no-port SS2[1] M5 # B
+set_io --warn-no-port SS2[2] L5 # C
+set_io --warn-no-port SS2[3] T14 # D
+set_io --warn-no-port SS2[4] T15 # E
+set_io --warn-no-port SS2[5] T16 # F
+set_io --warn-no-port SS2[6] R16 # G
+set_io --warn-no-port SS2[7] L7 # DP
+set_io --warn-no-port SS3[0] N10 # A
+set_io --warn-no-port SS3[1] M11 # B
+set_io --warn-no-port SS3[2] N12 # C
+set_io --warn-no-port SS3[3] P9 # D
+set_io --warn-no-port SS3[4] T10 # E
+set_io --warn-no-port SS3[5] R10 # F
+set_io --warn-no-port SS3[6] T11 # G
+set_io --warn-no-port SS3[7] P13 # DP
+set_io --warn-no-port SS4[0] T6 # A
+set_io --warn-no-port SS4[1] R6 # B
+set_io --warn-no-port SS4[2] T7 # C
+set_io --warn-no-port SS4[3] T3 # D
+set_io --warn-no-port SS4[4] R3 # E
+set_io --warn-no-port SS4[5] R4 # F
+set_io --warn-no-port SS4[6] T5 # G
+set_io --warn-no-port SS4[7] T8 # DP
+set_io --warn-no-port SS5[0] R15 # A
+set_io --warn-no-port SS5[1] T1 # B
+set_io --warn-no-port SS5[2] T2 # C
+set_io --warn-no-port SS5[3] L16 # D
+set_io --warn-no-port SS5[4] N16 # E
+set_io --warn-no-port SS5[5] M15 # F
+set_io --warn-no-port SS5[6] P16 # G
+set_io --warn-no-port SS5[7] B11 # DP
+set_io --warn-no-port BTN[0] K14 # A
+set_io --warn-no-port BTN[1] J14 # B
+set_io --warn-no-port BTN[2] K15 # C
+set_io --warn-no-port BTN[3] G15 # D
+
+set_io --warn-no-port SW[0] J15 # E
+set_io --warn-no-port SW[1] H14 # F
+set_io --warn-no-port SW[2] G14 # G
+set_io --warn-no-port SW[3] K16 # DP
+set_io --warn-no-port BTN0 K14 # A
+set_io --warn-no-port BTN1 J14 # B
+set_io --warn-no-port BTN2 K15 # C
+set_io --warn-no-port BTN3 G15 # D
+set_io --warn-no-port SW0 J15 # E
+set_io --warn-no-port SW1 H14 # F
+set_io --warn-no-port SW2 G14 # G
+set_io --warn-no-port SW3 K16 # DP
+set_io --warn-no-port SS6[0] K14 # A
+set_io --warn-no-port SS6[1] J14 # B
+set_io --warn-no-port SS6[2] K15 # C
+set_io --warn-no-port SS6[3] G15 # D
+set_io --warn-no-port SS6[4] J15 # E
+set_io --warn-no-port SS6[5] H14 # F
+set_io --warn-no-port SS6[6] G14 # G
+set_io --warn-no-port SS6[7] K16 # DP
+set_io --warn-no-port G[0] F16 # A
+set_io --warn-no-port G[1] E14 # B
+set_io --warn-no-port G[2] G16 # C
+set_io --warn-no-port G[3] B16 # D
+set_io --warn-no-port R[0] D16 # E
+set_io --warn-no-port R[1] D14 # F
+set_io --warn-no-port R[2] E16 # G
+set_io --warn-no-port R[3] F15 # DP
+set_io --warn-no-port G0 F16 # A
+set_io --warn-no-port J5 E14 # B
+set_io --warn-no-port H4 G16 # C
+set_io --warn-no-port G3 B16 # D
+set_io --warn-no-port R0 D16 # E
+set_io --warn-no-port N4 D14 # F
+set_io --warn-no-port R2 E16 # G
+set_io --warn-no-port R3 F15 # DP
+set_io --warn-no-port LED[0] F16 # A
+set_io --warn-no-port LED[1] E14 # B
+set_io --warn-no-port LED[2] G16 # C
+set_io --warn-no-port LED[3] B16 # D
+
+set_io --warn-no-port LED[4] D16 # E
+set_io --warn-no-port LED[5] D14 # F
+set_io --warn-no-port LED[6] E16 # G
+set_io --warn-no-port LED[7] F15 # DP
+set_io --warn-no-port LED0 F16 # A
+set_io --warn-no-port LED1 E14 # B
+set_io --warn-no-port LED2 G16 # C
+set_io --warn-no-port LED3 B16 # D
+set_io --warn-no-port LED4 D16 # E
+set_io --warn-no-port LED5 D14 # F
+set_io --warn-no-port LED6 E16 # G
+set_io --warn-no-port LED7 F15 # DP
+set_io --warn-no-port SS7[0] F16 # A
+set_io --warn-no-port SS7[1] E14 # B
+set_io --warn-no-port SS7[2] G16 # C
+set_io --warn-no-port SS7[3] B16 # D
+set_io --warn-no-port SS7[4] D16 # E
+set_io --warn-no-port SS7[5] D14 # F
+set_io --warn-no-port SS7[6] E16 # G
+set_io --warn-no-port SS7[7] F15 # DP
+set_io --warn-no-port PB19 A10
+set_io --warn-no-port PB18 C9
+set_io --warn-no-port PB17 A9
+set_io --warn-no-port PB16 B9
+set_io --warn-no-port PB15 B8
+set_io --warn-no-port PB14 A7
+set_io --warn-no-port PB13 B7
+set_io --warn-no-port PB12 C7
+set_io --warn-no-port PB11 A6
+set_io --warn-no-port PB10 C6
+set_io --warn-no-port PBZ A10
+set_io --warn-no-port PBY C9
+set_io --warn-no-port PBX A9
+set_io --warn-no-port PBW B9
+set_io --warn-no-port PBF B8
+set_io --warn-no-port PBE A7
+set_io --warn-no-port PBD B7
+set_io --warn-no-port PBC C7
+
+set_io --warn-no-port PBB A6
+set_io --warn-no-port PBA C6
+set_io --warn-no-port PB9 B6
+set_io --warn-no-port PB8 A5
+set_io --warn-no-port PB7 B5
+set_io --warn-no-port PB6 B4
+set_io --warn-no-port PB5 A2
+set_io --warn-no-port PB4 A1
+set_io --warn-no-port PB3 C5
+set_io --warn-no-port PB2 C4
+set_io --warn-no-port PB1 B3
+set_io --warn-no-port PB0 C3
+set_io --warn-no-port PB_19 A10
+set_io --warn-no-port PB_18 C9
+set_io --warn-no-port PB_17 A9
+set_io --warn-no-port PB_16 B9
+set_io --warn-no-port PB_15 B8
+set_io --warn-no-port PB_14 A7
+set_io --warn-no-port PB_13 B7
+set_io --warn-no-port PB_12 C7
+set_io --warn-no-port PB_11 A6
+set_io --warn-no-port PB_10 C6
+set_io --warn-no-port PB_Z A10
+set_io --warn-no-port PB_Y C9
+set_io --warn-no-port PB_X A9
+set_io --warn-no-port PB_W B9
+set_io --warn-no-port PB_F B8
+set_io --warn-no-port PB_E A7
+set_io --warn-no-port PB_D B7
+set_io --warn-no-port PB_C C7
+set_io --warn-no-port PB_B A6
+set_io --warn-no-port PB_A C6
+set_io --warn-no-port PB_9 B6
+set_io --warn-no-port PB_8 A5
+set_io --warn-no-port PB_7 B5
+set_io --warn-no-port PB_6 B4
+
+set_io --warn-no-port PB_5 A2
+set_io --warn-no-port PB_4 A1
+set_io --warn-no-port PB_3 C5
+set_io --warn-no-port PB_2 C4
+set_io --warn-no-port PB_1 B3
+set_io --warn-no-port PB_0 C3
+set_io --warn-no-port RIGHT[7] P10
+set_io --warn-no-port RIGHT[6] T13
+set_io --warn-no-port RIGHT[5] N4
+set_io --warn-no-port RIGHT[4] K5
+set_io --warn-no-port RIGHT[3] K3
+set_io --warn-no-port RIGHT[2] H1
+set_io --warn-no-port RIGHT[1] G5
+set_io --warn-no-port RIGHT[0] E4
+set_io --warn-no-port SEG[7] P10
+set_io --warn-no-port SEG[6] T13
+set_io --warn-no-port SEG[5] N4
+set_io --warn-no-port SEG[4] K5
+set_io --warn-no-port SEG[3] K3
+set_io --warn-no-port SEG[2] J3
+set_io --warn-no-port SEG[1] G5
+set_io --warn-no-port SEG[0] E4
+set_io --warn-no-port SEG7 P10
+set_io --warn-no-port SEG6 T13
+set_io --warn-no-port SEG5 N4
+set_io --warn-no-port SEG4 K5
+set_io --warn-no-port SEG3 K3
+set_io --warn-no-port SEG2 J3
+set_io --warn-no-port SEG1 G5
+set_io --warn-no-port SEG0 E4
+set_io --warn-no-port LEFT[7] C16
+set_io --warn-no-port LEFT[6] D15
+set_io --warn-no-port LEFT[5] H16
+set_io --warn-no-port LEFT[4] F14
+set_io --warn-no-port LEFT[3] M16
+set_io --warn-no-port LEFT[2] P15
+set_io --warn-no-port LEFT[1] R2
+set_io --warn-no-port LEFT[0] R5
+set_io --warn-no-port IO[7] C16
+set_io --warn-no-port IO[6] D15
+
+set_io --warn-no-port IO[5] H16
+set_io --warn-no-port IO[4] F14
+set_io --warn-no-port IO[3] M16
+set_io --warn-no-port IO[2] P15
+set_io --warn-no-port IO[1] R2
+set_io --warn-no-port IO[0] R5
+set_io --warn-no-port IO7 C16
+set_io --warn-no-port IO6 D15
+set_io --warn-no-port IO5 H16
+set_io --warn-no-port IO4 F14
+set_io --warn-no-port IO3 M16
+set_io --warn-no-port IO2 P15
+set_io --warn-no-port IO1 R2
+set_io --warn-no-port IO0 R5
+set_io --warn-no-port RIGHT_7 P10
+set_io --warn-no-port RIGHT_6 T13
+set_io --warn-no-port RIGHT_5 N4
+set_io --warn-no-port RIGHT_4 K5
+set_io --warn-no-port RIGHT_3 K3
+set_io --warn-no-port RIGHT_2 H1
+set_io --warn-no-port RIGHT_1 G5
+set_io --warn-no-port RIGHT_0 E4
+set_io --warn-no-port LEFT_7 C16
+set_io --warn-no-port LEFT_6 D15
+set_io --warn-no-port LEFT_5 H16
+set_io --warn-no-port LEFT_4 F14
+set_io --warn-no-port LEFT_3 M16
+set_io --warn-no-port LEFT_2 P15
+set_io --warn-no-port LEFT_1 R2
+set_io --warn-no-port LEFT_0 R5
+set_io --warn-no-port RIGHT7 P10
+set_io --warn-no-port RIGHT6 T13
+set_io --warn-no-port RIGHT5 N4
+set_io --warn-no-port RIGHT4 K5
+set_io --warn-no-port RIGHT3 K3
+set_io --warn-no-port RIGHT2 H1
+set_io --warn-no-port RIGHT1 G5
+set_io --warn-no-port RIGHT0 E4
+set_io --warn-no-port LEFT7 C16
+set_io --warn-no-port LEFT6 D15
+set_io --warn-no-port LEFT5 H16
+
+set_io --warn-no-port LEFT4 F14
+set_io --warn-no-port LEFT3 M16
+set_io --warn-no-port LEFT2 P15
+set_io --warn-no-port LEFT1 R2
+set_io --warn-no-port LEFT0 R5
+set_io --warn-no-port RED P8
+set_io --warn-no-port GREEN T9
+set_io --warn-no-port BLUE R9
+set_io --warn-no-port RGB_RED P8
+set_io --warn-no-port RGB_GREEN T9
+set_io --warn-no-port RGB_BLUE R9
+set_io --warn-no-port RGB[2] P8
+set_io --warn-no-port RGB[1] T9
+set_io --warn-no-port RGB[0] R9

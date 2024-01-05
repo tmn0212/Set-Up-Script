@@ -1,0 +1,5 @@
+sudo mount 192.168.0.176:/ecelabs_nfs /mnt/ecelabs_nfs
+tmux new-session -d -s "reader" python3  /home/pi/ecelabs/reader/MyFPGAWebAPI_ICE40Reader.py
+tmux new-session -d -s "writer" python3  /home/pi/ecelabs/writer/MyFPGAWebAPI_ICE40Writer.py
+
+

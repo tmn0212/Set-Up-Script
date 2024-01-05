@@ -1,0 +1,25 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:45389 (IPv4)
+Extension host agent listening on 45389
+
+[18:35:26] 
+
+
+
+
+[18:35:26] Extension host agent started.
+[18:35:27] [127.0.0.1][588add79][ManagementConnection] Unknown reconnection token (never seen).
+[18:35:27] [127.0.0.1][cc309930][ExtensionHostConnection] Unknown reconnection token (never seen).
+Got delay-shutdown request while in shutdown timeout, delaying
+[18:35:32] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[18:35:32] Cancelling previous shutdown timeout
+[18:35:32] [127.0.0.1][5cbf93cb][ManagementConnection] New connection established.
+[18:35:32] [127.0.0.1][fb8e660b][ExtensionHostConnection] New connection established.
+[18:35:32] [127.0.0.1][fb8e660b][ExtensionHostConnection] <1138> Launched Extension Host Process.

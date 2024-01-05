@@ -1,0 +1,21 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+
+# Variables
+set hostname "ice40New.local"
+set password "ecelabs"
+
+# Spawn SFTP and log in
+spawn sftp $hostname
+expect "password:"
+send "$password\r"
+expect "sftp>"
+
+# Execute "mget -r *"
+send "mget -r *\r"
+expect "sftp>"
+
+# Close the SFTP session
+send "exit\r"
+expect eof

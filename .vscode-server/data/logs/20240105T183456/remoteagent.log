@@ -1,0 +1,20 @@
+2024-01-05 18:34:57.038 [info] 
+
+
+
+
+2024-01-05 18:34:57.038 [info] Extension host agent started.
+2024-01-05 18:34:57.038 [info] Started initializing default profile extensions in extensions installation folder. file:///home/pi/.vscode-server/extensions
+2024-01-05 18:34:57.068 [info] [127.0.0.1][46d6026d][ManagementConnection] New connection established.
+2024-01-05 18:34:57.079 [info] [127.0.0.1][ca9a50a6][ExtensionHostConnection] New connection established.
+2024-01-05 18:34:57.100 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/pi/.vscode-server/extensions
+2024-01-05 18:34:57.456 [info] [127.0.0.1][ca9a50a6][ExtensionHostConnection] <1034> Launched Extension Host Process.
+2024-01-05 18:35:04.930 [info] [127.0.0.1][46d6026d][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-01-05 18:35:05.837 [info] [127.0.0.1][ca9a50a6][ExtensionHostConnection] <1034> Extension Host Process exited with code: 0, signal: null.
+2024-01-05 18:35:05.839 [info] Cancelling previous shutdown timeout
+2024-01-05 18:35:05.841 [info] Last EH closed, waiting before shutting down
+2024-01-05 18:35:08.576 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2024-01-05 18:35:08.577 [info] Cancelling previous shutdown timeout
+2024-01-05 18:35:08.706 [info] [127.0.0.1][588add79][ManagementConnection] New connection established.
+2024-01-05 18:35:08.714 [info] [127.0.0.1][cc309930][ExtensionHostConnection] New connection established.
+2024-01-05 18:35:08.747 [info] [127.0.0.1][cc309930][ExtensionHostConnection] <1157> Launched Extension Host Process.

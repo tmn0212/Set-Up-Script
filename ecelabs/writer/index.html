@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+
+        var sw
+        var i=0
+
+
+
+
+                function sw0off(e){
+
+                 $.post('/generator', {"switches":'0'+'x'.repeat(19)})
+
+                e.preventDefault();
+                }
+
+                function sw0on(e){
+
+
+
+                 $.post('/generator', {"switches": '1'+'x'.repeat(19)})
+
+                e.preventDefault();
+                }
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+    <button id="sw0-off" onclick = 'sw0off(event)'>SW0 Off</button>
+    <button id="sw0-on" onclick = 'sw0on(event)'>SW0 On</button>
+
+
+    </body>
+</html>
+
